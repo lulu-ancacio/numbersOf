@@ -1,4 +1,5 @@
 local numbersOf = {}
+
 local function fatorial(n)
     local fac = 1
     for i=n, 1, -1 do
