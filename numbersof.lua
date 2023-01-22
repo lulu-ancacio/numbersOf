@@ -81,6 +81,8 @@ end
 function numbersOf.fibonacci(n)
     if n ~= math.floor(n) or math.abs(n) ~= n then
         return nil
+    elseif n == 0 then
+        return 0
     elseif n == 1 or n == 2 then
         return 1
     else
@@ -91,7 +93,7 @@ end
 function numbersOf.tribonacci(n)
     if n ~= math.floor(n) or math.abs(n) ~= n then
         return nil
-    elseif n ==0 then
+    elseif n == 0 then
         return 0
     elseif n == 1 or n == 2 then
         return 1
@@ -105,7 +107,7 @@ end
 function numbersOf.tetranacci(n)
     if n ~= math.floor(n) or math.abs(n) ~= n then
         return nil
-    elseif n ==0 then
+    elseif n == 0 then
         return 0
     elseif n == 1 or n == 2 then
         return 1
@@ -119,7 +121,7 @@ end
 function numbersOf.pentanacci(n)
     if n ~= math.floor(n) or math.abs(n) ~= n then
         return nil
-    elseif n ==0 then
+    elseif n == 0 then
         return 0
     elseif n == 1 or n == 2 then
         return 1
@@ -135,7 +137,7 @@ end
 function numbersOf.hexanacci(n)
     if n ~= math.floor(n) or math.abs(n) ~= n then
         return nil
-    elseif n ==0 then
+    elseif n == 0 then
         return 0
     elseif n == 1 or n == 2 then
         return 1
@@ -153,7 +155,7 @@ end
 function numbersOf.heptanacci(n)
     if n ~= math.floor(n) or math.abs(n) ~= n then
         return nil
-    elseif n ==0 then
+    elseif n == 0 then
         return 0
     elseif n == 1 or n == 2 then
         return 1
