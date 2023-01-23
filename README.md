@@ -1,5 +1,5 @@
 <div align="center">
-<img width=380px height=390px src="https://user-images.githubusercontent.com/110111018/214109941-17d51dde-a0c3-477f-90d9-ee51cdb45da2.png"/>
+<img width=380px height=390px src="https://user-images.githubusercontent.com/110111018/214122638-0f3eedf1-4ef8-46af-9eca-a4758bbb32a6.png"/>
 </div>
 
 <h2>Módulo</h2>
