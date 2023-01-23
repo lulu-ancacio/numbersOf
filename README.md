@@ -30,8 +30,7 @@ Quais termos de sequências este módulo contempla?
 <li>Números de Thâbit ibn Qurra</li>
 <li>Números de Belphegor</li>
 <li>Números de Narayana</li>
-<li>Números de Bernoulli</li>![image](https://user-images.githubusercontent.com/110111018/214118921-28b525b9-fa35-4394-832c-1a805a692fc1.png)
-
+<li>Números de Bernoulli</li>
 <li>Números de Hermite</li>
 <li>Números de Connell</li>
 <li>Números de Apery</li>
