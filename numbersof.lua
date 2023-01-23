@@ -368,4 +368,18 @@ function numbersOf.apery(n)
     return apery_n
 end
 
+function numbersOf.genocchi(n)
+    if n ~= math.floor(n) or math.abs(n) ~= n then
+        return nil
+    elseif n == 1 then
+        return -1
+    elseif n == 2 then
+        return math.floor(2*(1-2^n)*numbersOf.bernoulli(n))
+    elseif n == 4 then
+        return math.ceil(2*(1-2^n)*numbersOf.bernoulli(n))
+    else
+        return 2*(1-2^n)*numbersOf.bernoulli(n)
+    end
+end
+
 return numbersOf
