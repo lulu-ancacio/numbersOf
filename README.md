@@ -9,7 +9,7 @@ Vários desafios de programação consistem em programar o enésimo item de uma 
 Quais termos de sequências este módulo contempla?
 <ul>
 <li>Números Metálicos</li>
-<li>Números harmonicôs</li>
+<li>Números Harmonicôs</li>
 <li>Números de Mersenne</li>
 <li>Números de Catalan</li>
 <li>Números Poligonais</li>
