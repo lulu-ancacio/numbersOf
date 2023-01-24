@@ -1,5 +1,7 @@
 local numbersOf = {}
 
+---------Funções de apoio----------
+
 local function fatorial(n)
     local fac = 1
     for i=n, 1, -1 do
@@ -20,7 +22,23 @@ local function zeta(n)
     return zeta_n
 end
 
------------------------------------------------------------------------
+local function stirlingS2(n, m)
+    local stirling = 0
+    for k=0, m do
+      stirling = stirling + ((-1)^(m-k))*binomio(m, k)*(k^n)
+    end
+    return stirling/fatorial(m)
+  end
+
+local function fatorial_crescente(n, m)
+    local fac_n = 1
+    for i=0, m-1 do
+        fac_n = fac_n*(n+i)
+    end
+    return fac_n
+end
+
+----------Sequências---------------
 
 function numbersOf.metalic(n)
     if n ~= math.floor(n) or math.abs(n) ~= n then
@@ -326,18 +344,6 @@ function numbersOf.narayana(n, m)
     end
 end
 
-function numbersOf.bernoulli(n)
-    if n/2 == math.floor(n/2) and n ~= 0 then
-      return ((-1)^(1+(n/2)))*((2*fatorial(n))/(2*math.pi)^(n))*zeta(n)
-    elseif n == 0 then
-      return 1
-    elseif n == 1 then
-      return -0.5
-    else
-      return 0
-    end
-end
-
 function numbersOf.hermite(n)
     if n ~= math.floor(n) or math.abs(n) ~= n then
         return nil
@@ -368,6 +374,20 @@ function numbersOf.apery(n)
     return apery_n
 end
 
+----------Aproximaçôes-------------
+
+function numbersOf.bernoulli(n)
+    if n/2 == math.floor(n/2) and n ~= 0 then
+      return ((-1)^(1+(n/2)))*((2*fatorial(n))/(2*math.pi)^(n))*zeta(n)
+    elseif n == 0 then
+      return 1
+    elseif n == 1 then
+      return -0.5
+    else
+      return 0
+    end
+end
+
 function numbersOf.genocchi(n)
     if n ~= math.floor(n) or math.abs(n) ~= n then
         return nil
@@ -381,5 +401,29 @@ function numbersOf.genocchi(n)
         return 2*(1-2^n)*numbersOf.bernoulli(n)
     end
 end
+
+function numbersOf.euler(n)
+    local euler_n = 0
+    if n ~= math.floor(n) or math.abs(n) ~= n then
+        return nil
+    elseif n == 0 then
+        return 1
+    else
+        for  i=1, n do
+            euler_n = euler_n + ((((-1)^i)*stirlingS2(n, i))/(i+1))*(3*fatorial_crescente(1/4, i)-fatorial_crescente(3/4, i))
+        end
+        return math.abs(euler_n*2^(2*n-1))
+    end
+end
+
+function numbersOf.tangent(n)
+    if n ~= math.floor(n) or math.abs(n) ~= n or n == 0 then
+        return nil
+    else
+        return ((2^(2*n))*((2^(2*n))-1))*math.abs(numbersOf.bernoulli(2*n))*(1/(2*n))
+    end
+end
+
+------------Retorno----------------
 
 return numbersOf
