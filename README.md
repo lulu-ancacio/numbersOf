@@ -36,10 +36,31 @@ Quais termos de sequências este módulo contempla?
 <li>Números de Apery</li>
 <li>Números de Genocchi</li>
 <li>Números de Euler</li>
-<li>Números Tangente</li>
+<li>Números Tangentes</li>
 </ul>
 </p>
 <br>
 <h2>Importando para seu projeto</h2>
+<p>
+Para consumir <strong>numbersOf</strong> em seus objetivos, baixe o arquivo ZIP deste repositório e extraia dele "numbersof.lua". Hospede o módulo no mesmo diretório que seu projeto, e efetue o seguinte procedimento dentro do arquivo que usufruirá deste acervo matemático:
+<br>
+
+```lua
+local myVariable = require('numbersof')
+```
+
+Desde modo, sua variável local terá consigo carregada todas as funções do módulo, e você poderá usá-las conforme sua intenção. Um exemplo:
+
+```lua
+local myValue = io.read()
+local myVariable = require('numbersof')
+
+print(myVariable.fibonacci(myValue))
+print(myVariable.bernoulli(myValue))
+```
+
+</p>
+
+
 <h2>Complicações na definição</h2>
 <h2>Fontes</h2>
