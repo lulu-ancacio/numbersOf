@@ -1,17 +1,17 @@
 local numbersOf = {}
 
----------Funções de apoio----------
+---------Support Functions---------
 
-local function fatorial(n)
-    local fac = 1
+local function factorial(n)
+    local fac_n = 1
     for i=n, 1, -1 do
-      fac = fac * i  
+      fac_n = fac_n * i  
     end
-    return fac
+    return fac_n
 end
 
-local function binomio(n, m)
-    return fatorial(n)/(fatorial(m)*fatorial(n-m))
+local function binomial(n, m)
+    return factorial(n)/(factorial(m)*factorial(n-m))
   end
 
 local function zeta(n)
@@ -23,22 +23,22 @@ local function zeta(n)
 end
 
 local function stirlingS2(n, m)
-    local stirling = 0
+    local stirling_n = 0
     for k=0, m do
-      stirling = stirling + ((-1)^(m-k))*binomio(m, k)*(k^n)
+      stirling_n = stirling_n + ((-1)^(m-k))*binomial(m, k)*(k^n)
     end
-    return stirling/fatorial(m)
+    return stirling_n/factorial(m)
   end
 
-local function fatorial_crescente(n, m)
-    local fac_n = 1
+local function increasingFactorial(n, m)
+    local inFac_n = 1
     for i=0, m-1 do
-        fac_n = fac_n*(n+i)
+        inFac_n = inFac_n*(n+i)
     end
-    return fac_n
+    return inFac_n
 end
 
-----------Sequências---------------
+-------------Sequences-------------
 
 function numbersOf.metalic(n)
     if n ~= math.floor(n) or math.abs(n) ~= n then
@@ -338,7 +338,7 @@ end
 
 function numbersOf.narayana(n, m)
     if n>0 and m<=n and 1<=n and (n and m) == math.floor(n and m) and (n and m) ~= 0 then
-        return (1/n)*binomio(n, m)*binomio(n, (m-1))
+        return (1/n)*binomial(n, m)*binomial(n, (m-1))
     else
         return nil
     end
@@ -348,7 +348,7 @@ function numbersOf.hermite(n)
     if n ~= math.floor(n) or math.abs(n) ~= n then
         return nil
     elseif n/2 == math.floor(n/2) or n == 0 then
-        return (((-1)^(n/2))*fatorial(n))/(fatorial(n/2))
+        return (((-1)^(n/2))*factorial(n))/(factorial(n/2))
     else
         return 0
     end
@@ -368,17 +368,17 @@ function numbersOf.apery(n)
         return nil
     else
         for i=0, n do
-            apery_n = apery_n + (binomio(n, i)^2)*(binomio((n+i), i))^2
+            apery_n = apery_n + (binomial(n, i)^2)*(binomial((n+i), i))^2
         end
     end
     return apery_n
 end
 
-----------Aproximaçôes-------------
+----------Approximations-----------
 
 function numbersOf.bernoulli(n)
     if n/2 == math.floor(n/2) and n ~= 0 then
-      return ((-1)^(1+(n/2)))*((2*fatorial(n))/(2*math.pi)^(n))*zeta(n)
+      return ((-1)^(1+(n/2)))*((2*factorial(n))/(2*math.pi)^(n))*zeta(n)
     elseif n == 0 then
       return 1
     elseif n == 1 then
@@ -410,7 +410,7 @@ function numbersOf.euler(n)
         return 1
     else
         for  i=1, n do
-            euler_n = euler_n + ((((-1)^i)*stirlingS2(n, i))/(i+1))*(3*fatorial_crescente(1/4, i)-fatorial_crescente(3/4, i))
+            euler_n = euler_n + ((((-1)^i)*stirlingS2(n, i))/(i+1))*(3*increasingFactorial(1/4, i)-increasingFactorial(3/4, i))
         end
         return math.abs(euler_n*2^(2*n-1))
     end
@@ -424,6 +424,6 @@ function numbersOf.tangent(n)
     end
 end
 
-------------Retorno----------------
+--------------Return---------------
 
 return numbersOf
