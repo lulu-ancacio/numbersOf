@@ -7,7 +7,7 @@
 
 <h2>Módulo</h2>
 <p>
-Vários desafios de programação consistem em programar o enésimo item de uma sequência, e <strong>numbersOf</strong> é o módulo 'curinga' que resolve todos esses problemas. Suas mais de 30 funções matemáticas auxiliam em trabalhos envolvendo sequências numéricas, geometria, estudos de números primos e o que sua criatividade permitir. 
+Vários desafios de programação consistem em programar o enésimo número de uma sequência, e <strong>numbersOf</strong> é o módulo 'curinga' que resolve todos esses problemas. Suas mais de 30 funções matemáticas auxiliam em trabalhos envolvendo sequências numéricas, geometria, estudos de números primos e o que sua criatividade permitir. 
 <br>
 Quais termos de sequências este módulo contempla?
 <ul>
