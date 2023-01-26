@@ -412,7 +412,7 @@ function numbersOf.euler(n)
         for  i=1, n do
             euler_n = euler_n + ((((-1)^i)*stirlingS2(n, i))/(i+1))*(3*increasingFactorial(1/4, i)-increasingFactorial(3/4, i))
         end
-        return math.abs(euler_n*2^(2*n-1))
+        return euler_n*2^(2*n-1)
     end
 end
 
