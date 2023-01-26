@@ -1,5 +1,8 @@
 <div align="center">
 <img width=380px height=390px src="https://user-images.githubusercontent.com/110111018/214122638-0f3eedf1-4ef8-46af-9eca-a4758bbb32a6.png"/>
+<br>
+<img src=https://img.shields.io/github/license/lulu-ancacio/numbersOf>
+<img src=http://img.shields.io/static/v1?label=language&message=lua&color=rgb(138,43,226)&style=flat>
 </div>
 
 <h2>Módulo</h2>
