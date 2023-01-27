@@ -37,6 +37,8 @@ Quais termos de sequências este módulo contempla?
 <li>Números de Hermite</li>
 <li>Números de Connell</li>
 <li>Números de Apery</li>
+<li>Números de Gregory</li>
+<li>Números Beraha</li>
 <li>Números de Genocchi</li>
 <li>Números de Euler</li>
 <li>Números Tangentes</li>
@@ -58,8 +60,8 @@ Desde modo, sua variável local terá consigo carregada todas as funções do m�
 </p>
 
 ```lua
-local myValue = io.read()
 local myVariable = require('numbersof')
+local myValue = io.read()
 
 print(myVariable.fibonacci(myValue))
 print(myVariable.bernoulli(myValue))
