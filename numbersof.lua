@@ -374,6 +374,18 @@ function numbersOf.apery(n)
     return apery_n
 end
 
+function numbersOf.gregory(n)
+    return math.atan(1/n)
+end
+
+function numbersOf.beraha(n)
+    if n ~= math.floor(n) or math.abs(n) ~= n and n == 0 then
+        return nil
+    else
+        return 2+2*math.cos(2*math.pi*(1/n))
+    end
+end
+
 ----------Approximations-----------
 
 function numbersOf.bernoulli(n)
