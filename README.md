@@ -43,6 +43,14 @@ Quais termos de sequências este módulo contempla?
 <li>Números de Euler</li>
 <li>Números Tangentes</li>
 </ul>
+Para o funcionamento de algumas funções foi também introduzido ao projeto, de modo segregado à importação do módulo, as funções de apoio:
+<ul>
+<li>Fatorial</li>
+<li>Binômio de Newton</li>
+<li>Função Zeta de Riemann (aproximação)</li>
+<li>Função Stirling do Segundo Tipo</li>
+<li>Fatorial Crescente</li>
+</ul>
 </p>
 <br>
 <h2>Importando para seu projeto</h2>
