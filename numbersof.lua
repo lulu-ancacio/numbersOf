@@ -30,12 +30,12 @@ local function stirlingS2(n, m)
     return stirling_n/factorial(m)
   end
 
-local function increasingFactorial(n, m)
-    local inFac_n = 1
+local function risingFactorial(n, m)
+    local risingFac_n = 1
     for i=0, m-1 do
-        inFac_n = inFac_n*(n+i)
+        risingFac_n = risingFac_n*(n+i)
     end
-    return inFac_n
+    return risingFac_n
 end
 
 -------------Sequences-------------
@@ -422,7 +422,7 @@ function numbersOf.euler(n)
         return 1
     else
         for  i=1, n do
-            euler_n = euler_n + ((((-1)^i)*stirlingS2(n, i))/(i+1))*(3*increasingFactorial(1/4, i)-increasingFactorial(3/4, i))
+            euler_n = euler_n + ((((-1)^i)*stirlingS2(n, i))/(i+1))*(3*risingFactorial(1/4, i)-risingFactorial(3/4, i))
         end
         return euler_n*2^(2*n-1)
     end
