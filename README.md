@@ -3,6 +3,7 @@
 <br>
 <img src="https://img.shields.io/github/license/lulu-ancacio/numbersOf?style=plastic">
 <img src="http://img.shields.io/static/v1?label=language&message=lua&color=rgb(138,43,226)&style=plastic">
+<img src="http://img.shields.io/static/v1?label=language&message=python&color=rgb(0, 154, 69)&style=plastic">
 </div>
 
 <h2>Módulo</h2>
@@ -53,7 +54,7 @@ Para o funcionamento de algumas funções foi também introduzido ao projeto, de
 </ul>
 </p>
 <br>
-<h2>Importando para seu projeto</h2>
+<h2>Importando para seu projeto (em lua)</h2>
 <p>
 Para consumir <strong>numbersOf</strong> em seus objetivos, baixe o arquivo ZIP deste repositório e extraia dele "numbersof.lua". Hospede o módulo no mesmo diretório que seu projeto e efetue o seguinte procedimento dentro do arquivo que usufruirá deste acervo matemático:
 </p>
